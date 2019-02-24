@@ -5,11 +5,7 @@ import mods.contenttweaker.Material;
 import mods.contenttweaker.MaterialBuilder;
 
 var color = Color.fromHex("248900") as Color;
+#.setColor(color)
+var builder = MaterialSystem.getMaterialBuilder().setName("Chlorophyte").setHasEffect(true).build();
 
-var chlorophyte = MaterialSystem.getMaterialBuilder();
-chlorophyte.setName("Chlorophyte");
-chlorophyte.setColor(color);
-chlorophyte.setHasEffect(true);
-chlorophyte.build();
-
-chlorophyte.registerParts(["gear", "plate", "nugget", "ingot", "rod", "dust"] as string[]);
+builder.registerParts(["gear", "plate", "nugget", "ingot", "rod", "dust"] as string[]);
